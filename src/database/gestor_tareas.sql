@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2026 a las 01:17:40
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 07-05-2026 a las 18:41:33
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,7 +47,8 @@ CREATE TABLE `tareas` (
 --
 
 INSERT INTO `tareas` (`id_tarea`, `id_usuario`, `titulo`, `descripcion`, `fecha_creacion`, `fecha_limite`, `hora_limite`, `estado`, `clasificacion`, `prioridad`, `completada`, `fecha_completada`) VALUES
-(13, 10, 'Prueba de tarea', 'Es la prueba para confirmar que funciona con la base de datos', '2026-05-06 16:17:12', '2026-05-06', '16:16:00', 'en_progreso', 'estudio', 'alta', 0, NULL);
+(14, 10, 'Prueba 2', 'Es mi examen', '2026-05-07 10:36:55', '2026-05-07', '10:36:00', 'completada', 'hogar', 'baja', 0, NULL),
+(15, 11, 'Prueba 3 ', 'Es la prueba del examen, para confirmar ', '2026-05-07 10:38:29', '2026-05-07', '10:38:00', 'en_progreso', 'estudio', 'alta', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `telefono`, `email`, `password`, `fecha_registro`, `ultimo_acceso`, `activo`) VALUES
-(10, 'Omar ', 'Ortega ', '6562032750', 'omar@correo.com', '$2b$12$YoZy3oQCmiVUoAzXHccU9uR4NTVpMYMQ3IobpvUsn8E3v8Q/W5awu', '2026-05-06 16:12:42', '2026-05-06 16:16:19', 1);
+(10, 'Omar ', 'Ortega ', '6562032750', 'omar@correo.com', '$2b$12$YoZy3oQCmiVUoAzXHccU9uR4NTVpMYMQ3IobpvUsn8E3v8Q/W5awu', '2026-05-06 16:12:42', '2026-05-07 10:38:57', 1),
+(11, 'Omar ', 'Ortega ', '6562072350', 'omar2@correo.com', '$2b$12$GmA5IkMpXFb0fcP0liFhj.ZlGhZCq3BMrnUigOznN.geqSkgwYLu6', '2026-05-07 10:37:54', '2026-05-07 10:39:18', 1);
 
 --
 -- Índices para tablas volcadas
@@ -100,13 +102,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `tareas`
 --
 ALTER TABLE `tareas`
-  MODIFY `id_tarea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_tarea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
